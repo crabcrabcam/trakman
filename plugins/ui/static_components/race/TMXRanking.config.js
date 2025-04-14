@@ -2,7 +2,7 @@ import cfg from '../../config/RaceUi.js'
 import icons from '../../config/Icons.js'
 
 export default {
-  entries: 3,
+  entries: 10,
   entryHeight: 2.15,
   width: cfg.width,
   margin: cfg.margin,
@@ -14,7 +14,7 @@ export default {
     2.8,
     4
   ],
-  topCount: 3,
+  topCount: 10,
   displayNoRecordEntry: false,
   hidePanel: true
 }

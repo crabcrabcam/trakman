@@ -21,8 +21,6 @@ export default {
     "TMXRanking",
     "TimerWidget",
     "LocalRanking",
-    "LiveRanking",
-    "DonationPanel"
   ],
   leftSideOrder: [
     "ButtonsWidget",
@@ -31,7 +29,8 @@ export default {
     "DediRanking",
     "AdminPanel"
   ],
-  otherComponents: ['BestCps', 'BestFinishes', 'CpCounter'],
+  //otherComponents: ['BestCps', 'BestFinishes', 'CpCounter'],
+  otherComponents: ['BestCps', 'CpCounter'],
   roundsRightSideOrder: [
     "MapWidget",
     "PreviousAndBest",
@@ -39,7 +38,6 @@ export default {
     "TimerWidget",
     "RoundScore",
     "RoundsPointsRanking",
-    "DonationPanel"
   ],
   roundsLeftSideOrder: [
     "ButtonsWidget",
