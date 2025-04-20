@@ -10,7 +10,7 @@ export default {
   overlayBackground: '7777',
   defaultText: '-',
   colour: p.green,
-  multijukePrivilege: 1, // privilege level for adding more than 1 map to the jukebox
+  multijukePrivilege: 0, // privilege level for adding more than 1 map to the jukebox
   multijukeMaxMaps: 5, // max amount of maps that can be added to the jukebox by one person
   unlimitedJukePrivilege: 2, // privilege level for unlimited jukebox (see 2 entries above)
   optionTitles: {
