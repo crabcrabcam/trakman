@@ -6,8 +6,8 @@ export const titles = {
     /**'crabcrabcam': 'Strimmer',*/
     'ca1ebyt': '4x Winner',
     'smxkxr': '2x Winner', /**Hydra*/
-    'thewinthinger': '6x Winner', /**Dark*/
-    'alzimo.rtg': '1x Winner',
+    'thewinthinger': '8x Winner', /**Dark*/
+    'alzimo.rtg': '2x Winner', /**Alexx**/
     'kstar11ftw': '1x Winner',
 
     'raceninja1': 'Mapper',
