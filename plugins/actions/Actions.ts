@@ -48,6 +48,7 @@ export const actions = {
     }
     tm.karma.add(info, voteValue)
     tm.sendMessage(tm.utils.strVar(config.addVote.message, {
+      title: info.title,
       nickname: tm.utils.strip(info.nickname),
       voteText: config.addVote.voteTexts[String(voteValue) as keyof typeof config.addVote.voteTexts]
     }), config.addVote.public ? undefined : info.login)

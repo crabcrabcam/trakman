@@ -2,11 +2,11 @@ import cfg from '../../config/RaceUi.js'
 import icons from '../../config/Icons.js'
 
 export default {
-  entries: 15,
-  teamsEntries: 15,
-  roundsEntries: 7,
-  cupEntries: 7,
-  lapsEntries: 7,
+  entries: 5,
+  teamsEntries: 5,
+  roundsEntries: 5,
+  cupEntries: 5,
+  lapsEntries: 5,
   entryHeight: 2.15,
   width: cfg.width,
   title: "Dedi Records",

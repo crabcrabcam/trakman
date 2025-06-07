@@ -12,7 +12,7 @@ export default {
   leftPosition: -63.75,
   rightSideOrder: [
     "MapWidgetResult",
-    "NextMapRecords",
+//    "NextMapRecords",
     "TimerWidgetResult",
     "KarmaRanking",
     "VotersRanking",
@@ -24,7 +24,7 @@ export default {
     "RankWidgetResult",
     "KarmaWidgetResult",
     "LocalRankingResult",
-    "DediRankingResult",
+//    "DediRankingResult",
     "RoundAveragesRanking",
     "AdminPanelResult"
   ],
