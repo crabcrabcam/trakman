@@ -96,6 +96,7 @@ const events: tm.Listener[] = [
         const player: tm.OfflinePlayer | undefined = tm.players.get(info.winnerLogin) ?? await tm.players.fetch(info.winnerLogin)
         if (info.winnerWins % c.specialWin === 0 && c.winPublic.public) {
           tm.sendMessage(tm.utils.strVar(c.winPublic.message, {
+            title: player?.title ?? '',
             nickname: tm.utils.strip(player?.nickname ?? '', true),
             wins: tm.utils.getOrdinalSuffix(info.winnerWins)
           }), undefined)
@@ -109,6 +110,7 @@ const events: tm.Listener[] = [
       }
       if (info.droppedMap !== undefined && c.jukeSkipped.public) {
         tm.sendMessage(tm.utils.strVar(c.jukeSkipped.message, {
+          title: player.title,
           map: tm.utils.strip(info.droppedMap.map.name, true),
           nickname: tm.utils.strip((await tm.players.fetch(info.droppedMap.callerLogin))?.nickname ?? '')
         }))
@@ -116,6 +118,7 @@ const events: tm.Listener[] = [
       if (tm.jukebox.juked[0]?.callerLogin !== undefined && c.nextJuke.public) {
         const player: tm.OfflinePlayer | undefined = tm.players.get(tm.jukebox.juked[0].callerLogin) ?? await tm.players.fetch(tm.jukebox.juked[0].callerLogin)
         tm.sendMessage(tm.utils.strVar(c.nextJuke.message, {
+          title: player.title,
           map: tm.utils.strip(tm.utils.decodeURI(tm.jukebox.juked[0].map.name), true),
           nickname: tm.utils.strip(player?.nickname ?? '', true)
         }))
@@ -127,6 +130,7 @@ const events: tm.Listener[] = [
     callback: (player: tm.LeaveInfo): void => {
       if (c.leave.public) {
         tm.sendMessage(tm.utils.strVar(c.leave.message, {
+          title: player.title,
           nickname: tm.utils.strip(player.nickname, true),
           time: tm.utils.getVerboseTime(player.sessionTime)
         }))
@@ -145,6 +149,7 @@ const events: tm.Listener[] = [
         }
         const rs = tm.utils.getRankingString({ time: info.time, position: info.position }, prevObj)
         tm.sendMessage(tm.utils.strVar(c.record.message, {
+          title: info.title,
           nickname: tm.utils.strip(info.nickname, true),
           status: rs.status,
           position: tm.utils.getOrdinalSuffix(info.position),
@@ -168,6 +173,7 @@ const events: tm.Listener[] = [
         }
         const rs = tm.utils.getRankingString({ time: info.time, position: info.position }, prevObj)
         tm.sendMessage(tm.utils.strVar(c.lapRecord.message, {
+          title: info.title,
           nickname: tm.utils.strip(info.nickname, true),
           status: rs.status,
           position: tm.utils.getOrdinalSuffix(info.position),
@@ -188,6 +194,7 @@ dedimania.onRecord((record) => {
   if (c.dediRecord.public) {
     const rs = tm.utils.getRankingString({ position: record.position, time: record.time }, record.previous)
     tm.sendMessage(tm.utils.strVar(c.dediRecord.message, {
+      title: record.title,
       nickname: tm.utils.strip(record.nickname, true),
       status: rs.status,
       position: tm.utils.getOrdinalSuffix(record.position),
@@ -206,6 +213,7 @@ ultimania.onRecord((record) => {
       { time: record.previous.score, position: record.previous.position }
     const rs = tm.utils.getRankingString({ position: record.position, time: record.score }, prev)
     tm.sendMessage(tm.utils.strVar(c.ultiRecord.message, {
+      title: record.title,
       nickname: tm.utils.strip(record.nickname, true),
       status: rs.status,
       position: tm.utils.getOrdinalSuffix(record.position),

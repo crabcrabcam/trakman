@@ -13,7 +13,7 @@ export default {
       '-3': 'waste'
     },
     public: true,
-    message: `${p.highlight}#{nickname}${p.vote} thinks this map is ${p.highlight}#{voteText}${p.vote}.`
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.vote} thinks this map is ${p.highlight}#{voteText}${p.vote}.`
   },
   kick: {
     text: `${p.admin}#{title} ${p.highlight}#{adminName} ${p.admin}has kicked ${p.highlight}#{name}${p.admin}.`,
@@ -100,7 +100,7 @@ export default {
   publicAdd: {
     voteGoal: 0.51,
     voteText: `${p.highlight}Vote to $${p.green}ADD #{mapName}${p.highlight} from TMX.`,
-    voteStart: `${p.highlight}#{nickname} ${p.vote}started a vote to ${p.highlight}add #{mapName}${p.vote} from TMX.`,
+    voteStart: `${p.highlight}#{title}: #{nickname} ${p.vote}started a vote to ${p.highlight}add #{mapName}${p.vote} from TMX.`,
     voteTime: 30,
     voteIcon: icons.tagGreen,
     alreadyRunning: `${p.error}A vote is already running.`,

@@ -40,19 +40,19 @@ export default {
     public: true
   },
   winPublic: {
-    message: `${p.record}Congratulations to ${p.highlight}#{nickname} ${p.record}for winning their ${p.rank}#{wins} ${p.record}race.`,
+    message: `${p.record}Congratulations to ${p.servermsg}#{title} ${p.highlight}#{nickname} ${p.record}for winning their ${p.rank}#{wins} ${p.record}race.`,
     public: true
   },
   leave: {
-    message: `${p.highlight}#{nickname}${p.servermsg} has quit after ${p.highlight}#{time}${p.servermsg}.`,
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.servermsg} has quit after ${p.highlight}#{time}${p.servermsg}.`,
     public: true
   },
   record: {
-    message: `${p.highlight}#{nickname}${p.record} has #{status} the ${p.rank}#{position}${p.record} local record. #{type}${p.highlight}: #{time}#{difference}`,
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.record} has #{status} the ${p.rank}#{position}${p.record} local record. #{type}${p.highlight}: #{time}#{difference}`,
     public: true
   },
   lapRecord: {
-    message: `${p.highlight}#{nickname}${p.message} has #{status} the ${p.rank}#{position}${p.message} lap record. Time${p.highlight}: #{time}#{difference}`,
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.message} has #{status} the ${p.rank}#{position}${p.message} lap record. Time${p.highlight}: #{time}#{difference}`,
     public: true
   },
   recordDifference: {
@@ -62,22 +62,22 @@ export default {
     message: ` $n${p.dedirecord}(${p.rank}#{position} ${p.highlight}-#{time}${p.dedirecord})`,
   },
   dediRecord: {
-    message: `${p.highlight}#{nickname}${p.dedirecord} has #{status} the ${p.rank}#{position}${p.dedirecord} dedimania record. Time${p.highlight}: #{time}#{difference}`,
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.dedirecord} has #{status} the ${p.rank}#{position}${p.dedirecord} dedimania record. Time${p.highlight}: #{time}#{difference}`,
     public: true
   },
   ultiDifference: {
     message: ` $n${p.dedirecord}(${p.rank}#{position} ${p.highlight}+#{score}${p.dedirecord})`,
   },
   ultiRecord: {
-    message: `${p.highlight}#{nickname}${p.dedirecord} has #{status} the ${p.rank}#{position}${p.dedirecord} ultimania record. Score${p.highlight}: #{score}#{difference}`,
+    message: `${p.servermsg}#{title} ${p.highlight} #{nickname}${p.dedirecord} has #{status} the ${p.rank}#{position}${p.dedirecord} ultimania record. Score${p.highlight}: #{score}#{difference}`,
     public: true
   },
   nextJuke: {
-    message: `${p.vote}The next map will be ${p.highlight}#{map}${p.vote}, as requested by ${p.highlight}#{nickname}${p.vote}.`,
+    message: `${p.vote}The next map will be ${p.highlight}#{map}${p.vote}, as requested by ${p.servermsg}#{title} ${p.highlight} #{nickname}${p.vote}.`,
     public: true
   },
   jukeSkipped: {
-    message: `${p.vote}Map ${p.highlight}#{map} ${p.vote}will be dropped from the queue, as ${p.highlight}#{nickname} ${p.vote}has left the server.`,
+    message: `${p.vote}Map ${p.highlight}#{map} ${p.vote}will be dropped from the queue, as ${p.servermsg}#{title} ${p.highlight} #{nickname} ${p.vote}has left the server.`,
     public: true
   },
 }
