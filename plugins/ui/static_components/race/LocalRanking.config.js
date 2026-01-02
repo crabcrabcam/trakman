@@ -10,7 +10,7 @@ export default {
   stuntsEntries: 5,
   entryHeight: 2.15,
   width: cfg.width,
-  title: "Local Records",
+  title: 'Local Records',
   icon: icons.chartLocal,
   margin: cfg.margin,
   topCount: 5,

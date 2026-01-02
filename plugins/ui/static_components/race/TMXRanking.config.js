@@ -6,7 +6,7 @@ export default {
   entryHeight: 2.15,
   width: cfg.width,
   margin: cfg.margin,
-  title: "TMX Records",
+  title: 'TMX Records',
   icon: icons.maniaExchange,
   columnProportions: [
     1,
